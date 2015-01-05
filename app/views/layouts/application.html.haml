@@ -1,0 +1,45 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "foundation-rails"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tags
+  %body
+    .row
+      .large-12.columns
+        .nav-bar.right
+          %ul.button-group
+            %li
+              %a.button{:href => "#"} Link 1
+            %li
+              %a.button{:href => "#"} Link 2
+            %li
+              %a.button{:href => "#"} Link 3
+            %li
+              %a.button{:href => "#"} Link 4
+        %h1
+          Blog
+          %small This is my blog. It's awesome.
+        %hr/
+    = yield
+    %footer.row
+      .large-12.columns
+        %hr/
+        .row
+          .large-6.columns
+            %p © Copyright no one at all. Go to town.
+          .large-6.columns
+            %ul.inline-list.right
+              %li
+                %a{:href => "#"} Link 1
+              %li
+                %a{:href => "#"} Link 2
+              %li
+                %a{:href => "#"} Link 3
+              %li
+                %a{:href => "#"} Link 4
+    = render 'layouts/messages'
+    = javascript_include_tag "application"
