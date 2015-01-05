@@ -1,2 +1,4 @@
 <!-- TODO -->
-<p id="notice"><%= notice %></p>
+<% flash.each do |key, msg| %>
+  <p id="notice"><%= msg %></p>
+<% end %>
