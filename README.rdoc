@@ -1,28 +1,11 @@
-== README
+= Lesleh.co.uk
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This probably doesn't matter at all to you unless you're me. Feel free to look at how I've done stuff though and use any
+code you find here.
 
-Things you may want to cover:
+= Setup
 
-* Ruby version
+There's a few extra things to do if you want it to actually work.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Make sure to set AUTH_USERNAME and AUTH_PASSWORD environment variables. These are set to username and password for dev.
+* Probably need some OAuth keys at some point. None there yet but there will be.

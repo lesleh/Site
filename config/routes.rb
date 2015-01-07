@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'session/login'
+
+  get 'session/logout'
+
   get 'static_pages/show'
 
   resources :posts
