@@ -33,6 +33,8 @@ gem 'friendly_id', '~> 5.0.0'
 # Use Unicorn as the app server
 gem 'unicorn'
 
+gem 'instagram'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

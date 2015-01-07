@@ -1,0 +1,6 @@
+.row
+  .large-12.columns{:role => "content"}
+    %h2 Photos
+    - for photo in @photos
+      %a{:href => photo[:link], :title => photo[:caption]}
+        %img{:src => photo[:thumbnail]}/

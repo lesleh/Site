@@ -9,9 +9,10 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
+  get 'photos' => 'photos#index'
+
   get 'about' => 'static_pages#view', defaults: { id: 'about' }
   get 'projects' => 'static_pages#view', defaults: { id: 'projects' }
-  get 'photos' => 'static_pages#view', defaults: { id: 'photos' }
   get 'contact' => 'static_pages#view', defaults: { id: 'contact' }
 
   # The priority is based upon order of creation: first created -> highest priority.
