@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :set_default_title
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -10,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @page_title = @post.title
   end
 
   # GET /posts/new
@@ -62,6 +64,10 @@ class PostsController < ApplicationController
   end
 
   private
+    def set_default_title
+      @page_title = "Blog"
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.friendly.find(params[:id])
