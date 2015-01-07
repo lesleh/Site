@@ -18,3 +18,7 @@
 
 # RubyMine etc
 .idea/
+
+# Bower
+vendor/assets/components/*
+!vendor/assets/components/.keep

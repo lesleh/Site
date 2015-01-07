@@ -13,5 +13,4 @@ There's a few extra things to do if you want it to actually work.
 
 == TODO
 
-* Switch to using Bower for resources
 * Make the Instagram stuff a bit more resilient. Hardcoding the access token isn't very robust.
