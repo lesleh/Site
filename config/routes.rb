@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/show'
 
-  resources :posts
+  resources :posts, :path => 'blog'
 
   root 'posts#index'
 
