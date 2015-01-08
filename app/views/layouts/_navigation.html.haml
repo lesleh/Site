@@ -1,19 +1,19 @@
 .row
-  .large-12.columns
-    .nav-bar.right
-      %ul.button-group
-        %li
-          = link_to "Home", root_path, :class => 'button'
-        %li
-          = link_to "Blog", posts_path, :class => 'button'
-        %li
-          = link_to "About", about_path, :class => 'button'
-        %li
-          = link_to "Projects", projects_path, :class => 'button'
-        %li
-          = link_to "Photos", photos_path, :class => 'button'
-        %li
-          = link_to "Contact", contact_path, :class => 'button'
-    %h1.top
-      = link_to 'Lesleh.co.uk', root_path
-    %hr/
+  .medium-12.columns
+    %nav.top-bar{"data-topbar" => "", :role => "navigation"}
+      %ul.title-area
+        %li.name
+          %h1
+            %a{:href => "#"} Lesleh.co.uk
+        / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+        %li.toggle-topbar.menu-icon
+          %a{:href => "#"}
+            %span
+      %section.top-bar-section
+        / Right Nav Section
+        %ul.right
+          = active_link_to "Blog", posts_path, :wrap_tag => :li
+          = active_link_to "About", about_path, :wrap_tag => :li
+          = active_link_to "Projects", projects_path, :wrap_tag => :li
+          = active_link_to "Photos", photos_path, :wrap_tag => :li
+          = active_link_to "Contact", contact_path, :wrap_tag => :li

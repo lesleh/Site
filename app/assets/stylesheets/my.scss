@@ -1,13 +1,8 @@
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif !important;
   font-weight: 300;
 }
 
-h1.top {
-  a {
-    color: black;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+nav {
+  margin-bottom: 20px !important;
 }

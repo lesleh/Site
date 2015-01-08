@@ -33,6 +33,8 @@ gem 'instagram'
 
 gem 'foundation_rails_helper' # Forms
 
+gem 'active_link_to'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
