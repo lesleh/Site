@@ -31,6 +31,8 @@ gem 'unicorn'
 
 gem 'instagram'
 
+gem 'foundation_rails_helper' # Forms
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :messages
+
   get 'session/login'
 
   get 'session/logout'
@@ -11,9 +13,10 @@ Rails.application.routes.draw do
 
   get 'photos' => 'photos#index'
 
+  get 'contact' => 'messages#new'
+
   get 'about' => 'static_pages#view', defaults: { id: 'about' }
   get 'projects' => 'static_pages#view', defaults: { id: 'projects' }
-  get 'contact' => 'static_pages#view', defaults: { id: 'contact' }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
