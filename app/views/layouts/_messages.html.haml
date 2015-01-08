@@ -2,6 +2,6 @@
   .small-12.columns
     - flash.each do |name, msg|
       - if msg.is_a?(String)
-        %div{:class => "alert-box #{name.to_s == 'notice' ? 'success' : 'alert'}", "data-alert" => ""}
+        %div{:class => "alert-box #{name.to_s}", "data-alert" => ""}
           = content_tag :div, msg
           %a.close{:href => "#"} &times;
