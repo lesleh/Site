@@ -1,0 +1,11 @@
+= form_for(@message) do |f|
+  .field
+    = f.text_field :name
+  .field
+    = f.text_field :email
+  .field
+    = f.text_field :subject
+  .field
+    = f.text_area :body, :rows => 10
+  .actions
+    = f.submit
