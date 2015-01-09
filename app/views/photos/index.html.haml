@@ -4,5 +4,5 @@
     %ul{:class => 'clearing-thumbs small-block-grid-3 medium-block-grid-4 large-block-grid-6'}
       - for photo in @photos
         %li
-          %a{:href => photo[:link], :title => photo[:caption], :class => 'th'}
+          %a.th{:href => photo[:link], :title => photo[:caption]}
             %img{:src => photo[:thumbnail]}/
