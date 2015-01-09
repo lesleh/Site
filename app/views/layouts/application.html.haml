@@ -12,7 +12,9 @@
   %body
     = render 'layouts/navigation'
     = render 'layouts/messages'
-    = yield
+
+    %main{:role => 'main'}
+      = yield
 
     %footer.row
       .large-12.columns

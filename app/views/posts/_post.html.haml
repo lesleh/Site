@@ -1,2 +1,3 @@
-%h2= link_to_unless_current post.title, post
-= post.body.html_safe
+%article
+  %h2= link_to_unless_current post.title, post
+  = post.body.html_safe
