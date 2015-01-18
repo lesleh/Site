@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require lightbox2/js/lightbox
 //= require foundation
 //= require_tree .
 
