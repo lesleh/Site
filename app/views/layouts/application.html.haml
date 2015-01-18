@@ -7,10 +7,10 @@
       #{@page_title}
       = ' - ' if @page_title
       Lesleh.co.uk
+    %link{:type => 'image/img', :href => '/favicon.png', :rel => 'icon'}
     %link{:href => 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300', :rel => 'stylesheet', :type => 'text/css'}/
     = stylesheet_link_tag    "application"
     = javascript_include_tag "modernizr/modernizr"
-    = csrf_meta_tags
   %body
     = render 'layouts/navigation'
     = render 'layouts/messages'
