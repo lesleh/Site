@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'static_pages#view', defaults: { id: 'index' }
+  root 'home#index'
 
   resources :posts, :path => 'blog'
   resources :messages
