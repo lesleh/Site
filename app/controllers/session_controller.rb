@@ -1,3 +1,5 @@
+require 'uri'
+
 class SessionController < ApplicationController
   before_filter :authenticate, :only => :login
 
@@ -7,6 +9,8 @@ class SessionController < ApplicationController
 
   def logout
     do_logout
-    redirect_back_or_default root_path, :notice => 'Logged out'
+    url = URI(root_url)
+    url.password = url.user = 'wrong'
+    redirect_to url.to_s
   end
 end
