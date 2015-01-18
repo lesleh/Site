@@ -2,6 +2,7 @@
   "name": "lesleh.co.uk",
   "private": true,
   "dependencies": {
-    "foundation": "~5.5.0"
+    "foundation": "~5.5.0",
+    "modernizr": "~2.8.3"
   }
 }
