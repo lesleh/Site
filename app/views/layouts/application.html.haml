@@ -23,9 +23,11 @@
         %hr/
         .row
           .large-6.columns
-            %p © Copyright no one at all. Go to town.
+            %p © Leslie Hoare.
           .large-6.columns
             %ul.inline-list.right
+              %li
+                %a{:href => 'http://www.github.com/lesleh/Site/'} Github
               - if logged_in?
                 %li
                   = link_to "Logout", session_logout_path
