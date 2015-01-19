@@ -36,6 +36,8 @@ gem 'instagram'
 
 gem 'active_link_to'
 
+gem 'bootstrap_form'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
