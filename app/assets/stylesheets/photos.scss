@@ -2,16 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-ul.gallery {
-  padding:0 0 0 0;
-  margin:0 0 0 0;
+.gallery {
+  text-align: center;
+  line-height: 149px;
 
-  li {
-    list-style:none;
-    margin-bottom:25px;
-
-    img {
-      cursor: pointer;
-    }
+  img {
+    width: 150px;
+    height: 150px;
   }
 }
