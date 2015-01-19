@@ -50,5 +50,7 @@ group :development, :test do
   gem 'spring'
 
   gem "erb2haml"
+
+  gem 'rspec-rails', '~> 3.0'
 end
 
