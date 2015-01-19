@@ -16,22 +16,8 @@
     = render 'layouts/messages'
 
     %main{:role => 'main'}
-      = yield
+      .container
+        = yield
 
-    %footer.row
-      .large-12.columns
-        %hr/
-        .row
-          .large-6.columns
-            %p © Leslie Hoare.
-          .large-6.columns
-            %ul.inline-list.right
-              %li
-                %a{:href => 'http://www.github.com/lesleh/Site/'} Github
-              - if logged_in?
-                %li
-                  = link_to "Logout", session_logout_path
-              - else
-                %li
-                  = link_to "Login", session_login_path
+    = render 'layouts/footer'
     = javascript_include_tag "application"
