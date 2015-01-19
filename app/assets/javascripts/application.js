@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery/dist/jquery
+//= require bootstrap
 //= require lightbox2/js/lightbox
 //= require jquery-readyselector/jquery.readyselector
 //= require_tree .
