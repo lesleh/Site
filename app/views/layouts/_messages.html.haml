@@ -1,7 +1,7 @@
-.row
-  .small-12.columns
+.container
+  .row
     - flash.each do |name, msg|
       - if msg.is_a?(String)
-        %div{:class => "alert-box #{name.to_s}", "data-alert" => ""}
-          = content_tag :div, msg
-          %a.close{:href => "#"} &times;
+        %div{:class => "alert #{bootstrap_class_for(name)}"}
+          = msg
+          %button{:type => "button", :class => "close", :data => {:dismiss =>"alert"}} ×
