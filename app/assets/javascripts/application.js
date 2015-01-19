@@ -12,8 +12,5 @@
 //
 //= require jquery/dist/jquery
 //= require lightbox2/js/lightbox
-//= require foundation/js/foundation
 //= require jquery-readyselector/jquery.readyselector
 //= require_tree .
-
-$(function(){ $(document).foundation(); });
