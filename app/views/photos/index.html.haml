@@ -1,7 +1,7 @@
 .row
   .large-12.columns{:role => "content"}
     %h2 Photos
-    %ul
+    %ul.gallery
       - for photo in @photos
         %li.col-lg-2.col-md-2.col-sm-3.col-xs-4
           %a{:href => photo[:image], :title => photo[:caption], :data => {:lightbox => 'x'}}
