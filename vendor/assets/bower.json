@@ -1,9 +1,0 @@
-{
-  "name": "dsl-generated dependencies",
-  "dependencies": {
-    "foundation": "latest",
-    "jquery": "latest",
-    "lightbox2": "latest",
-    "jquery-readyselector": "latest"
-  }
-}
