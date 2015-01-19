@@ -10,9 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery/dist/jquery
 //= require lightbox2/js/lightbox
-//= require foundation
+//= require foundation/js/foundation
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

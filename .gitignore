@@ -20,8 +20,7 @@
 .idea/
 
 # Bower
-vendor/assets/components/*
-!vendor/assets/components/.keep
+vendor/assets/bower_components/
 
 public/assets/*
 !public/assets/.keep
