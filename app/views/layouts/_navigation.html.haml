@@ -1,19 +1,21 @@
-.row
-  .medium-12.columns
-    %nav.top-bar{"data-topbar" => "", :role => "navigation"}
-      %ul.title-area
-        %li.name
-          %h1
-            = link_to "Lesleh.co.uk", root_path
-        / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
-        %li.toggle-topbar.menu-icon
-          %a{:href => "#"}
-            %span
-      %section.top-bar-section
-        / Right Nav Section
-        %ul.right
-          = active_link_to "Blog", posts_path, :wrap_tag => :li
-          = active_link_to "About", about_path, :wrap_tag => :li
-          = active_link_to "Projects", projects_path, :wrap_tag => :li
-          = active_link_to "Photos", photos_path, :wrap_tag => :li
-          = active_link_to "Contact", contact_path, :wrap_tag => :li
+.navbar.navbar-default
+  .container
+    .navbar-header
+      %a.navbar-brand{:href => "/"} Lesleh.co.uk
+      %button.navbar-toggle{"data-target" => "#navbar-main", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    #navbar-main.navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        = active_link_to 'Blog', posts_path, :wrap_tag => :li
+        = active_link_to 'About', about_path, :wrap_tag => :li
+        = active_link_to 'Projects', projects_path, :wrap_tag => :li
+        = active_link_to 'Photos', photos_path, :wrap_tag => :li
+        = active_link_to 'Contact', contact_path, :wrap_tag => :li
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          - if logged_in?
+            = link_to 'Logout', session_logout_path
+          - else
+            = link_to 'Login', session_login_path
