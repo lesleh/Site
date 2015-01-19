@@ -5,3 +5,4 @@
 asset 'foundation'
 asset 'jquery'
 asset 'lightbox2'
+asset 'jquery-readyselector'
