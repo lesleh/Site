@@ -1,0 +1,31 @@
+@import 'bootswatch_variables';
+
+@footer-height: 45px;
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: @footer-height;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: @footer-height;
+  color: @navbar-default-color;
+  background-color: @navbar-default-bg;
+  padding: unit((@footer-height - 20)/2, px);
+}
+
+.footer > .container {
+}
+
+main {
+  padding-bottom: 25px;
+}

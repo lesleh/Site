@@ -1,8 +1,7 @@
 .row
-  .large-12.columns{:role => "content"}
+  .col-sm-12
     %h2 Photos
-    %ul{:class => 'clearing-thumbs small-block-grid-3 medium-block-grid-4 large-block-grid-6'}
+    %p.gallery<
       - for photo in @photos
-        %li
-          %a.th{:href => photo[:image], :title => photo[:caption], :data => {:lightbox => 'x'}}
-            %img{:src => photo[:thumbnail]}/
+        %a{:href => photo[:image], :title => photo[:caption], :data => {:lightbox => 'x'}}><
+          %img{:src => photo[:thumbnail]}/
