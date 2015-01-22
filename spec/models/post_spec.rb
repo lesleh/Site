@@ -5,7 +5,7 @@ RSpec.describe Post, :type => :model do
   let(:valid_attributes) {
     {
         title: "Another Post",
-        body: "<p>This is another blog post.</p>"
+        body: "<p>First paragraph.</p> <p>Second paragraph.</p>"
     }
   }
 
@@ -35,6 +35,11 @@ RSpec.describe Post, :type => :model do
     it "requires a body" do
       post = Post.create(valid_attributes.except(:body))
       expect(post.valid?).to be(false)
+    end
+
+    it "gets the first paragraph" do
+      post = Post.create(valid_attributes)
+      expect(post.first_paragraph).to eq("<p>First paragraph.</p>")
     end
   end
 
