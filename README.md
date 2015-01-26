@@ -1,7 +1,5 @@
 = Lesleh.co.uk
 
-[![Code Climate](https://codeclimate.com/github/lesleh/Site/badges/gpa.svg)](https://codeclimate.com/github/lesleh/Site)
-
 This probably doesn't matter at all to you unless you're me. Feel free to look at how I've done stuff though and use any
 code you find here.
 
