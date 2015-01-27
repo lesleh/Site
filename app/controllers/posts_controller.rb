@@ -6,7 +6,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order(:created_at => :desc)
+    if params[:year] && params[:month]
+      @year = params[:year]
+      @month = params[:month]
+      @posts = Post.with_year_and_month(@year, @month)
+    else
+      @posts = Post.order(:created_at => :desc)
+    end
   end
 
   # GET /posts/1

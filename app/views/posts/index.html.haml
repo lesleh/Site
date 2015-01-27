@@ -4,3 +4,8 @@
     - if logged_in?
       %br/
       = link_to 'New Post', new_post_path
+  .col-md-4
+    .bs-component
+      .list-group
+        - Post.months.each do |date|
+          = link_to_month_archive date, :class => 'list-group-item'

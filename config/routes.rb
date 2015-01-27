@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  get 'blog/archive/:year/:month' => 'posts#index'
   resources :posts, :path => 'blog'
+
   resources :messages
 
   # Authentication
