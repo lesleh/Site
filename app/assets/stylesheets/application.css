@@ -7,5 +7,6 @@
  *= require session
  *= require static_pages
  *= require sticky_footer
+ *= require syntax
  *= require_self
  */
