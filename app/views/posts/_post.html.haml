@@ -1,3 +1,4 @@
-%article
-  %h2= link_to_unless_current post.title, post, :rel => 'bookmark'
-  = markdown post.body
+- cache(post) do
+  %article
+    %h2= link_to_unless_current post.title, post, :rel => 'bookmark'
+    = markdown post.body
