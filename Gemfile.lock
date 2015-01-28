@@ -140,7 +140,9 @@ GEM
     raindrops (0.13.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    redcarpet (3.2.2)
     ref (1.0.5)
+    rouge (1.7.7)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -219,6 +221,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   less-rails
   rails (= 4.2.0)
+  redcarpet
+  rouge
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

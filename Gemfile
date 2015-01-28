@@ -38,6 +38,10 @@ gem 'active_link_to'
 
 gem 'bootstrap_form'
 
+# Markdown in blog posts
+gem 'redcarpet'
+gem 'rouge'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
