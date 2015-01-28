@@ -23,6 +23,7 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Message.new(message_params)
+    @message.ip = request.remote_ip
 
     respond_to do |format|
       if @message.save
