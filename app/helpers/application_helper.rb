@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def markdown(text)
-    markdown = Redcarpet::Markdown.new(RougeHTML, fenced_code_blocks: true)
+    markdown = Redcarpet::Markdown.new(RougeHTML, fenced_code_blocks: true, no_intra_emphasis: true)
     markdown.render(text).html_safe
   end
 
