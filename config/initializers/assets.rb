@@ -6,11 +6,6 @@ Rails.application.config.assets.version = '1.0'
 # Bower assets
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
 
-Rails.application.config.assets.precompile += %w( modernizr/modernizr.js )
-
-# Lightbox images
-Rails.application.config.assets.precompile += %w( lightbox2/img/*.gif lightbox2/img/*.png )
-
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

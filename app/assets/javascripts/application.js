@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require modernizr/modernizr
 //= require jquery/dist/jquery
 //= require bootstrap
 //= require lightbox2/js/lightbox
