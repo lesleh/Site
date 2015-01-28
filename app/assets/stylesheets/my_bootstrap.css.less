@@ -1,3 +1,13 @@
 @import 'bootstrap/less/bootstrap';
 @import 'bootswatch_variables';
 @import 'bootswatch_styles';
+
+/* Horizontal scrolling in code blocks */
+pre {
+  overflow-x: auto;
+
+  code {
+    overflow-wrap: normal;
+    white-space: pre;
+  }
+}
