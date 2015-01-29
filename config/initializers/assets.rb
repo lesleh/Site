@@ -9,6 +9,9 @@ Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'co
 # Lightbox images
 Rails.application.config.assets.precompile += %w( lightbox2/img/*.gif lightbox2/img/*.png )
 
+# FontAwesome fonts
+Rails.application.config.assets.precompile += %w( fontawesome/fonts/* )
+
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
