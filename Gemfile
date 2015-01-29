@@ -38,6 +38,8 @@ gem 'active_link_to'
 
 gem 'bootstrap_form'
 
+gem 'responders', '~> 2.0'
+
 # Markdown in blog posts
 gem 'redcarpet'
 gem 'rouge'
