@@ -8,10 +8,6 @@ class Post < ActiveRecord::Base
     where("strftime('%m', created_at) = ? AND strftime('%Y', created_at) = ?", "%02d" % month, year.to_s)
   }
 
-  def first_paragraph
-    body[/<p>.*?<\/p>/]
-  end
-
   def self.months
     select(:created_at).group_by {|t| t.created_at.beginning_of_month }.map {|k,_| k}
   end
