@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @page_title = @post.title
+    @disqus_shortname = Rails.application.secrets.disqus_shortname
   end
 
   # GET /posts/new
