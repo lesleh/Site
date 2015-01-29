@@ -2,7 +2,6 @@ class MessagesController < ApplicationController
   before_action :authenticate, only: [:index, :show, :destroy]
   before_action :set_message, only: [:show, :edit, :update, :destroy]
   before_action :set_title
-  respond_to :html, :json
 
   # GET /messages
   # GET /messages.json
@@ -26,16 +25,25 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.ip = request.remote_ip
 
-    flash[:success] = "Message was successfully created." if @message.save
-    respond_with(@message)
+    respond_to do |format|
+      if @message.save
+        format.html { redirect_to root_path, :flash => { :success => "Message sent" } }
+        format.json { render :show, status: :created, location: @message }
+      else
+        format.html { render :new }
+        format.json { render json: @message.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # DELETE /messages/1
   # DELETE /messages/1.json
   def destroy
     @message.destroy
-    flash[:success] = "Message deleted"
-    respond_with @message
+    respond_to do |format|
+      format.html { redirect_to messages_url, :flash => { :success => "Message deleted" } }
+      format.json { head :no_content }
+    end
   end
 
   private
