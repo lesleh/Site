@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
     @message.ip = request.remote_ip
 
     flash[:success] = "Message was successfully created." if @message.save
-    respond_with(@message)
+    respond_with(@message, location: root_path)
   end
 
   def destroy
