@@ -8,5 +8,6 @@
  *= require static_pages
  *= require sticky_footer
  *= require syntax
+ *= require fontawesome/css/font-awesome.min
  *= require_self
  */
