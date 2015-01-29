@@ -24,4 +24,9 @@ module ApplicationHelper
     markdown.render(text).html_safe
   end
 
+  def random_pun
+    pun = Pun.random
+    pun.present? ? pun.text : ''
+  end
+
 end
