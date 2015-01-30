@@ -17,7 +17,7 @@ module Site
     config.time_zone = 'London'
 
     # Compression
-    config.middleware.use Rack::Deflater
+    config.middleware.use Rack::Deflater unless RUBY_PLATFORM == 'java'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]

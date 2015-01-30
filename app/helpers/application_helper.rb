@@ -1,5 +1,3 @@
-require 'rouge/plugins/redcarpet'
-
 module ApplicationHelper
 
   def bootstrap_class_for flash_type
@@ -15,18 +13,13 @@ module ApplicationHelper
     true if session[:login]
   end
 
-  class RougeHTML < Redcarpet::Render::HTML
-    include Rouge::Plugins::Redcarpet # yep, that's it.
-  end
-
-  def markdown(text)
-    markdown = Redcarpet::Markdown.new(RougeHTML, fenced_code_blocks: true, no_intra_emphasis: true)
-    markdown.render(text).html_safe
-  end
-
   def random_pun
     pun = Pun.random
     pun.present? ? pun.text : ''
+  end
+
+  def markdown(text)
+    Kramdown::Document.new(text).to_html.html_safe
   end
 
 end
