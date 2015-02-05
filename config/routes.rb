@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   # Static pages
   get 'about' => 'static_pages#view', defaults: { id: 'about' }
   get 'projects' => 'static_pages#view', defaults: { id: 'projects' }
+  get 'page/:id' => 'static_pages#view'
 end
