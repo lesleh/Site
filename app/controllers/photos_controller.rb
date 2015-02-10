@@ -19,8 +19,8 @@ class PhotosController < ApplicationController
       {
           caption: caption,
           link: e.link,
-          image: e.images.standard_resolution.url,
-          thumbnail: e.images.thumbnail.url
+          image: e.images.standard_resolution.url.gsub(/^http/, 'https'),
+          thumbnail: e.images.thumbnail.url.gsub(/^http/, 'https')
       }
     end
   end
