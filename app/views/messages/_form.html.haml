@@ -1,4 +1,5 @@
-= bootstrap_form_for(@message) do |f|
+= bootstrap_form_for(@message, :inline_errors => false) do |f|
+  =f.alert_message "Please fix the errors below."
   .field
     = f.text_field :name
   .field
