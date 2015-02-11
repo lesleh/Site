@@ -43,8 +43,5 @@ gem 'bootstrap_form'
 group :development, :test do
   gem 'spring'
   gem "erb2haml"
-end
-
-group :test do
   gem 'rspec-rails', '~> 3.0'
 end
