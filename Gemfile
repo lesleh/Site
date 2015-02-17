@@ -37,6 +37,8 @@ gem 'active_link_to'
 
 gem 'bootstrap_form'
 
+gem 'will_paginate-bootstrap'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
