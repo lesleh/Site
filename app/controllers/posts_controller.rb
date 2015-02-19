@@ -52,7 +52,7 @@ class PostsController < ApplicationController
     end
 
     def invalidate_archives
-      cache.delete('blog_archive_links')
+      Rails.cache.delete('blog_archive_links')
     end
 
     # Use callbacks to share common setup or constraints between actions.
