@@ -53,7 +53,7 @@ GEM
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.0)
+    coffee-script-source (1.9.1)
     commonjs (0.2.7)
     diff-lcs (1.2.5)
     erb2haml (0.1.5)
@@ -64,7 +64,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
-    friendly_id (5.0.5)
+    friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
@@ -211,7 +211,7 @@ DEPENDENCIES
   bower-rails (~> 0.9.1)
   coffee-rails (~> 4.1.0)
   erb2haml
-  friendly_id (~> 5.0.0)
+  friendly_id (~> 5.0)
   haml
   instagram
   jbuilder (~> 2.0)
