@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate, except: [:index, :show]
   before_action :set_default_title
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  after_action :invalidate_archives, only: [:new, :destroy]
   respond_to :html, :json
 
   def index
@@ -48,6 +49,10 @@ class PostsController < ApplicationController
   private
     def set_default_title
       @page_title = "Blog"
+    end
+
+    def invalidate_archives
+      cache.delete('blog_archive_links')
     end
 
     # Use callbacks to share common setup or constraints between actions.
