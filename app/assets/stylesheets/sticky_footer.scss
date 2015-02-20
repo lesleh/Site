@@ -1,0 +1,15 @@
+@import 'variables';
+
+footer {
+  color: $navbar-default-color;
+  background-color: $navbar-default-bg;
+  padding: 15px;
+
+  p {
+    margin: 0;
+  }
+}
+
+main {
+  padding-bottom: 25px;
+}

@@ -8,7 +8,6 @@ gem 'sqlite3', platform: :ruby
 gem 'activerecord-jdbcsqlite3-adapter', platform: :jruby
 
 # Assets
-gem 'less-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'

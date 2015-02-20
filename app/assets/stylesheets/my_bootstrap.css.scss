@@ -1,6 +1,6 @@
-@import 'bootstrap/less/bootstrap';
-@import 'bootswatch_variables';
-@import 'bootswatch_styles';
+@import "variables";
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+@import "styles";
 
 /* Horizontal scrolling in code blocks */
 pre {

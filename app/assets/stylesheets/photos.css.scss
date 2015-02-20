@@ -1,0 +1,27 @@
+@import 'variables';
+
+@mixin gallery-size($size) {
+  .gallery {
+    text-align: center;
+    line-height: $size - 1;
+
+    img {
+      width: $size;
+      height: $size;
+    }
+  }
+}
+
+@include gallery-size(75px);
+
+@media (min-width: $screen-sm-min) {
+  @include gallery-size(100px);
+}
+
+@media (min-width: $screen-md-min) {
+  @include gallery-size(125px);
+}
+
+@media (min-width: $screen-lg-min) {
+  @include gallery-size(150px);
+}
