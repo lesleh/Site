@@ -15,5 +15,3 @@ test:
 production:
   <<: *default
   database: Site_production
-  username: Site
-  password: <%= ENV['SITE_DATABASE_PASSWORD'] %>
