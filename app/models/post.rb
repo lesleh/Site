@@ -5,7 +5,8 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :body
 
   scope :with_year_and_month, ->(year, month) {
-    where("strftime('%m', created_at) = ? AND strftime('%Y', created_at) = ?", "%02d" % month, year.to_s)
+    d = DateTime.new(year, month, 1)
+    where(created_at: d.beginning_of_month..d.end_of_month)
   }
 
   def self.months
