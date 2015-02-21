@@ -16,4 +16,4 @@ production:
   <<: *default
   database: Site_production
   username: Site
-  password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
+  password: <%= ENV['SITE_DATABASE_PASSWORD'] %>
