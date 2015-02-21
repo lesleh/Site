@@ -32,11 +32,6 @@ GEM
       activemodel (= 4.2.0)
       activesupport (= 4.2.0)
       arel (~> 6.0)
-    activerecord-jdbc-adapter (1.3.14)
-      activerecord (>= 2.2)
-    activerecord-jdbcsqlite3-adapter (1.3.14)
-      activerecord-jdbc-adapter (~> 1.3.14)
-      jdbc-sqlite3 (>= 3.7.2, < 3.9)
     activesupport (4.2.0)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -85,7 +80,6 @@ GEM
     jbuilder (2.2.7)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jdbc-sqlite3 (3.8.7)
     json (1.8.2)
     json (1.8.2-java)
     kramdown (1.5.0)
@@ -102,6 +96,7 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     nokogiri (1.6.6.2-java)
+    pg (0.18.1)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -174,7 +169,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.10)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -200,7 +194,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_link_to
-  activerecord-jdbcsqlite3-adapter
+  activerecord-postgresql-adapter
   bootstrap_form
   bower-rails (~> 0.9.1)
   coffee-rails (~> 4.1.0)
@@ -210,13 +204,13 @@ DEPENDENCIES
   instagram
   jbuilder (~> 2.0)
   kramdown
+  pg
   rails (= 4.2.0)
   responders (~> 2.0)
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
-  sqlite3
   therubyracer
   therubyrhino
   uglifier (>= 1.3.0)

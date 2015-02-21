@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150129220150) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "messages", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150129220150) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "posts", ["slug"], name: "index_posts_on_slug"
+  add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
 
   create_table "puns", force: :cascade do |t|
     t.string   "text"
