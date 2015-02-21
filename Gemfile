@@ -38,6 +38,8 @@ gem 'bootstrap_form'
 
 gem 'will_paginate-bootstrap'
 
+gem 'quiet_assets', group: :development
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -46,4 +48,9 @@ gem 'puma', platform: :jruby
 group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
+end
+
+group :development do
+  gem "binding_of_caller", platform: :ruby
+  gem "better_errors", platform: :ruby # Doesn't like JRuby :(
 end
