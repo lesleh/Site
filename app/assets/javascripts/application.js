@@ -15,4 +15,7 @@
 //= require bootstrap-sass/assets/javascripts/bootstrap
 //= require lightbox2/js/lightbox
 //= require jquery-readyselector/jquery.readyselector
+//= require jquery.hypher
+//= require hypher.en-gb
+//= require hypher_config
 //= require_tree .
