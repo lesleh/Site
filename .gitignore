@@ -26,3 +26,6 @@ vendor/assets/bower_components/
 
 public/assets/*
 !public/assets/.keep
+
+# Environment variables
+/env.sh
