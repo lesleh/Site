@@ -51,6 +51,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "rack-mini-profiler", require: false
   gem "binding_of_caller", platform: :ruby
   gem "better_errors", platform: :ruby # Doesn't like JRuby :(
 end
