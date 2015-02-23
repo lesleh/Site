@@ -2,7 +2,7 @@
   .col-md-8
     = render @posts
     - if logged_in?
-      %br/
+      br/
       = link_to 'New Post', new_post_path
     .text-center
       = will_paginate @posts, renderer: BootstrapPagination::Rails

@@ -17,7 +17,7 @@ gem "bower-rails", "~> 0.9.1"
 gem 'therubyracer', platform: :ruby
 gem 'therubyrhino', platform: :jruby
 
-gem 'haml'
+gem 'slim-rails'
 gem 'jbuilder', '~> 2.0'
 
 # bundle exec rake doc:rails generates the API under doc/api.

@@ -22,4 +22,12 @@ module ApplicationHelper
     Kramdown::Document.new(text).to_html.html_safe
   end
 
+  def page_title
+    title = ""
+    if @page_title.present?
+      title = @page_title + " | "
+    end
+    title += "Lesleh.co.uk"
+  end
+
 end

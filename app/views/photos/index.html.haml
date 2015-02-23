@@ -1,7 +1,0 @@
-.row
-  .col-sm-12
-    %h2 Photos
-    %p.gallery<
-      - for photo in @photos
-        %a{:href => photo[:image], :title => photo[:caption], :data => {:lightbox => 'x'}}><
-          %img{:src => photo[:thumbnail]}/

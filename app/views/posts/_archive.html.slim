@@ -1,6 +1,6 @@
 - cache('blog_archive_links', :expires_in => 1.hour) do
   .col-md-4
-    %h3 Archive
+    h3 Archive
     .bs-component
       .list-group
         - Post.months.each do |date|
