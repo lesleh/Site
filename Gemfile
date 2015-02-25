@@ -44,6 +44,7 @@ gem "secure_headers"
 # gem 'capistrano-rails', group: :development
 
 gem 'puma', platform: :jruby
+gem "warbler"
 
 group :development, :test do
   gem 'spring'
