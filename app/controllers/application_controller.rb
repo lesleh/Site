@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  ensure_security_headers
+
   private
 
   # TODO This just doesn't work since Chrome caches the credentials. Maybe set some fake credentials to force a logout.

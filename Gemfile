@@ -38,7 +38,7 @@ gem 'bootstrap_form'
 
 gem 'will_paginate-bootstrap'
 
-gem 'quiet_assets', group: :development
+gem "secure_headers"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -51,6 +51,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'quiet_assets'
   gem "rack-mini-profiler", require: false
   gem "binding_of_caller", platform: :ruby
   gem "better_errors", platform: :ruby # Doesn't like JRuby :(
