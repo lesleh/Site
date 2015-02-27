@@ -12,7 +12,7 @@
 //
 //= require modernizr/modernizr
 //= require jquery/dist/jquery
-//= require bootstrap-sass/assets/javascripts/bootstrap
+//= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require lightbox2/js/lightbox
 //= require jquery-readyselector/jquery.readyselector
 //= require jquery.hypher
