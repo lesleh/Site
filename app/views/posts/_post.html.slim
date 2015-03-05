@@ -1,4 +1,10 @@
-- cache(post) do
-  article
-    h2= link_to post.title, post, :rel => 'bookmark'
-    = markdown post.body
+article
+  h2= link_to post.title, post, :rel => 'bookmark'
+
+  = markdown post.body
+  - if post.extra_body.present?
+    - if current_page? post
+      = markdown post.extra_body
+    - else
+      p
+        = link_to "Read more", post

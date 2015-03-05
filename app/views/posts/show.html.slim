@@ -1,6 +1,7 @@
 .row
   .col-md-8
-    = render @post
+    article
+      = render @post
     p
       - if logged_in?
         = link_to 'Edit', edit_post_path(@post)
