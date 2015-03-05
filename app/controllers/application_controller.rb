@@ -13,10 +13,9 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate
-    login = authenticate_or_request_with_http_basic do |username, password|
+    session[:login] = authenticate_or_request_with_http_basic do |username, password|
       username == Rails.application.secrets.username && password == Rails.application.secrets.password
     end
-    session[:login] = login
   end
 
   # Sometimes redirect back just doesn't work
