@@ -3,14 +3,16 @@ class ChartsController < ApplicationController
 
   def index
     chart_type = params[:id]
-    @chart_data = Rails.cache.fetch("#{chart_type}_chart_data", expires_in: 1.hour, force: true) do
+
+    expires_in = DateTime.now - next_chart_datetime
+
+    @chart_data = Rails.cache.fetch("#{chart_type}_chart_data", expires_in: expires_in) do
       get_chart_data(chart_type)
     end
   end
 
   protected
 
-  # TODO sometimes the chart data is incomplete (on a sunday, when the new chart is coming up)
   def get_chart_data(chart)
     raise ArgumentError("Unknown chart type") unless ['singles', 'albums'].include? chart
 
@@ -26,6 +28,15 @@ class ChartsController < ApplicationController
     end
 
     data
+  end
+
+  # The chart data only changes once a week, 7pm on a Sunday
+  def next_chart_datetime
+    dt = DateTime.now.change(hour: 20, minute: 0)
+    if(!dt.sunday?)
+      dt = dt.beginning_of_week(:sunday).next_day(7)
+    end
+    dt
   end
 
 end
