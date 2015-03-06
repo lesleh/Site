@@ -3,7 +3,7 @@ class ChartsController < ApplicationController
 
   def index
     chart_type = params[:id]
-    @chart_data = Rails.cache.fetch("#{chart_type}_chart_data", expires_in: 1.hour) do
+    @chart_data = Rails.cache.fetch("#{chart_type}_chart_data", expires_in: 1.hour, force: true) do
       get_chart_data(chart_type)
     end
   end
@@ -22,7 +22,7 @@ class ChartsController < ApplicationController
     data = []
     doc.css('tr')[1..-1].each do |row| # First row is headers
       x = row.css('td').map {|k| k.text}
-      data << OpenStruct.new(Hash[ [keys, x].transpose ])
+      data << Hash[ [keys, x].transpose ]
     end
 
     data
