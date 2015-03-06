@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'contact' => 'messages#new'
 
+  get 'projects/charts/:id' => 'charts#index'
+
   # Static pages
   get 'about' => 'static_pages#view', defaults: { id: 'about' }
   get 'projects' => 'static_pages#view', defaults: { id: 'projects' }
