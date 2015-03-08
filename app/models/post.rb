@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   acts_as_taggable
 
   scope :with_year_and_month, ->(year, month) {
-    d = DateTime.new(year, month, 1).beginning_of_month
+    d = DateTime.new(year.to_i, month.to_i, 1).beginning_of_month
     where(created_at: d...d.next_month)
   }
 
