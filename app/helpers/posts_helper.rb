@@ -1,4 +1,5 @@
 module PostsHelper
+  include ActsAsTaggableOn::TagsHelper
 
   def month_archive_link_title(date)
     date.strftime("%B %Y")
@@ -11,7 +12,7 @@ module PostsHelper
   end
 
   def tag_links(post)
-    post.tags.map(&:name).map {|t| link_to t, posts_tag_path(t)}.join(', ').html_safe
+    post.tags.map(&:name).map {|t| link_to t, blog_tag_path(t)}.join(', ').html_safe
   end
 
 end
