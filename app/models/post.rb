@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :title, :body
 
+  acts_as_taggable
+
   scope :with_year_and_month, ->(year, month) {
     d = DateTime.new(year, month, 1).beginning_of_month
     where(created_at: d...d.next_month)

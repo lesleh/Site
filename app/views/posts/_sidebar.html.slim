@@ -1,0 +1,11 @@
+.col-md-4
+  h3 Archive
+  .bs-component
+    .list-group
+      - Post.months.each do |date|
+        = link_to_month_archive date, :class => 'list-group-item'
+  h3 Tags
+  .bs-component
+    .list-group
+      - Post.tag_counts.each do |tag|
+        = link_to tag.name, blog_tag_path(tag.name), :class => 'list-group-item'

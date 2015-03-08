@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'blog/archive/:year/:month' => 'posts#index', :as => 'blog_archive'
+  get 'blog/tag/:tag' => 'posts#index', :as => 'blog_tag'
+  get 'blog/archive/:year/:month' => 'posts#index'
   resources :posts, :path => 'blog'
 
   resources :messages

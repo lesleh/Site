@@ -1,6 +1,12 @@
 article
   h2= link_to post.title, post, :rel => 'bookmark'
 
+  - if post.tags.present?
+    p
+      | Tags:
+      '
+      = tag_links(post)
+
   = markdown post.body
   - if post.extra_body.present?
     - if current_page? post
