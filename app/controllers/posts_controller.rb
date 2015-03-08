@@ -10,6 +10,8 @@ class PostsController < ApplicationController
       @year = params[:year]
       @month = params[:month]
       @posts = Post.with_year_and_month(@year, @month)
+    elsif params[:tag]
+      @posts = Post.tagged_with(params[:tag]).order(:created_at => :desc)
     else
       @posts = Post.order(:created_at => :desc)
     end
