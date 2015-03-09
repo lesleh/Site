@@ -5,6 +5,7 @@
 /* Horizontal scrolling in code blocks */
 pre {
   overflow-x: auto;
+  word-wrap: inherit;
 
   code {
     overflow-wrap: normal;

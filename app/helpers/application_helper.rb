@@ -19,7 +19,12 @@ module ApplicationHelper
   end
 
   def markdown(text)
-    Kramdown::Document.new(text).to_html.html_safe
+    opts = {
+        :coderay_wrap => :div,
+        :enable_coderay => true,
+        :coderay_line_numbers => nil
+    }
+    Kramdown::Document.new(text, opts).to_html.html_safe
   end
 
   def page_title
