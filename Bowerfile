@@ -3,6 +3,7 @@
 
 asset 'bootstrap-sass'
 asset 'jquery'
+asset 'jquery-ujs'
 asset 'lightbox2'
 asset 'jquery-readyselector'
 asset 'modernizr'

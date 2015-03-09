@@ -11,7 +11,8 @@
 // about supported directives.
 //
 //= require modernizr/modernizr
-//= require jquery/dist/jquery
+//= require jquery
+//= require jquery-ujs
 //= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require lightbox2/js/lightbox
 //= require jquery-readyselector/jquery.readyselector
