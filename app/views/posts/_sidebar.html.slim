@@ -8,4 +8,4 @@
   p.tag-cloud
     - tag_cloud Post.tag_counts_on(:tags), %w(s m l) do |tag, classname|
       = link_to tag.name, blog_tag_path(tag.name), :class => classname
-      |
+      |  
