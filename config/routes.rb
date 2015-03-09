@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'posts#index'
 
   get 'blog/archive/:year/:month' => 'posts#index', :as => 'blog_archive'
   get 'blog/tag/:tag' => 'posts#index', :as => 'blog_tag'
   get 'blog/archive/:year/:month' => 'posts#index'
-  resources :posts, :path => 'blog'
+  resources :posts, :path => 'blog', :except => :index
 
   resources :messages
 
