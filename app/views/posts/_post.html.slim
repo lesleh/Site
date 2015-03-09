@@ -1,7 +1,7 @@
 article
   h2
     = link_to post.title, post, :rel => 'bookmark'
-    small.text-muted
+    small.text-muted.text-nowrap
       '
       = post.created_at.strftime('%F')
 

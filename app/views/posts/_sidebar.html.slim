@@ -5,7 +5,6 @@
       - Post.months.each do |date|
         = link_to_month_archive date, :class => 'list-group-item'
   h3 Tags
-  .bs-component
-    .list-group
-      - Post.tag_counts.each do |tag|
-        = link_to tag.name, blog_tag_path(tag.name), :class => 'list-group-item'
+  p.tag-cloud
+    - tag_cloud Post.tag_counts_on(:tags), %w(s m l) do |tag, classname|
+      = link_to tag.name, blog_tag_path(tag.name), :class => classname

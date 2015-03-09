@@ -4,6 +4,7 @@
  *= require home
  *= require messages
  *= require photos
+ *= require posts
  *= require session
  *= require static_pages
  *= require sticky_footer
