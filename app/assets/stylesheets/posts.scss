@@ -1,5 +1,16 @@
+@import 'variables';
+
 .tag-cloud {
-  .s { font-size: 100% }
-  .m { font-size: 130% }
-  .l { font-size: 190% }
+  .s {
+    font-size: 100%;
+    color: lighten($brand-primary, 10%);
+  }
+  .m {
+    font-size: 130%;
+    color: $brand-primary;
+  }
+  .l {
+    font-size: 190%;
+    color: darken($brand-primary, 10%);
+  }
 }
