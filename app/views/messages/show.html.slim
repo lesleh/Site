@@ -1,12 +1,10 @@
-p
-  strong Name:
-  = @message.name
-p
-  strong Email:
-  = @message.email
-p
-  strong Subject:
-  = @message.subject
-p
-  strong Body:
-  = @message.body
+.row
+  .col-md-8
+    p
+      strong From:
+      |  
+      = mail_to(@message.email, @message.name)
+    p
+      strong Subject:
+      = ' ' + @message.subject
+    p= @message.body

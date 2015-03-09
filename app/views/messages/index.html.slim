@@ -11,5 +11,5 @@
         - @messages.each do |message|
           tr
             td= mail_to message.email, message.name
-            td= link_to message.subject, message
+            td= link_to message.subject, message, data: {'row-link' => ''}
             td= truncate message.body, length: 80
