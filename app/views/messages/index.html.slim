@@ -1,20 +1,15 @@
 .row
-  .large-12.columns
-    h1 Messages
-    table
+  .col-md-12
+    h2 Messages
+    table.table.table-striped
       thead
         tr
-          th Name
-          th Email
-          th Subject
-          th Body
-          th colspan="2" 
+          th.col-md-2 From
+          th.col-md-3 Subject
+          th.col-md-7 Body
       tbody
         - @messages.each do |message|
           tr
-            td= message.name
-            td= message.email
-            td= message.subject
-            td= message.body
-            td= link_to 'Show', message
-            td= link_to 'Destroy', message, method: :delete, data: {confirm: 'Are you sure?'}
+            td= mail_to message.email, message.name
+            td= link_to message.subject, message
+            td= truncate message.body, length: 80
