@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pages
+
   root 'posts#index'
 
   get 'blog/archive/:year/:month' => 'posts#index', :as => 'blog_archive'
