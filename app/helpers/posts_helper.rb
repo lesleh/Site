@@ -16,4 +16,13 @@ module PostsHelper
     post.tags.map(&:name).map {|t| link_to t, blog_tag_path(t)}.join(', ').html_safe
   end
 
+  def show_tag_cloud
+    out = ''
+    tag_cloud Post.tag_counts_on(:tags), %w(s m l) do |tag, classname|
+      out << link_to(tag.name, blog_tag_path(tag.name), :class => classname)
+      out << ' '
+    end
+    out.html_safe
+  end
+
 end
