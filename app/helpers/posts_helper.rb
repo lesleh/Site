@@ -1,16 +1,14 @@
 module PostsHelper
   include ActsAsTaggableOn::TagsHelper
 
-  def link_to_month_archive(date, *opts)
-    link_to date.strftime("%B %Y"), blog_archive_path(date.year, '%02d' % date.month), *opts
+  def url_for_month_archive(date, *opts)
+    url_for blog_archive_path(date.year, '%02d' % date.month), *opts
   end
 
   def post_months
     Post.months.reverse.map do |k|
-      {
-          :title => k[:date].strftime("%B %Y"),
-          :count => k[:count]
-      }
+      k[:title] = k[:date].strftime("%B %Y")
+      k
     end
   end
 

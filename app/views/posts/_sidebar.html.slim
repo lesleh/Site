@@ -3,7 +3,7 @@
   .bs-component
     .list-group
       - post_months.each do |month|
-        = link_to '/', :class => 'list-group-item' do
+        = link_to url_for_month_archive(month[:date]), :class => 'list-group-item' do
           span.badge= month[:count]
           = month[:title]
   h3 Tags
