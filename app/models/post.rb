@@ -12,6 +12,11 @@ class Post < ActiveRecord::Base
   }
 
   def self.months
-    select(:created_at).group_by {|t| t.created_at.beginning_of_month }.map {|k,_| k}
+    select(:created_at).group_by {|t| t.created_at.beginning_of_month }.map do |k,v|
+      {
+          date: k,
+          count: v.size
+      }
+    end
   end
 end

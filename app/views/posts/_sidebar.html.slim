@@ -2,8 +2,12 @@
   h3 Archive
   .bs-component
     .list-group
-      - Post.months.each do |date|
-        = link_to_month_archive date, :class => 'list-group-item'
+      / Put this in a helper
+      - Post.months.each do |month|
+        = link_to '/', :class => 'list-group-item' do
+          span.badge= month[:count]
+          |
+          = month[:date].strftime("%B %Y")
   h3 Tags
   p.tag-cloud.text-center
     - tag_cloud Post.tag_counts_on(:tags), %w(s m l) do |tag, classname|
