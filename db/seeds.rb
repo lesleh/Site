@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Required pages, because of the header links
+['About', 'Projects'].each do |title|
+  Page.create!(title: title, body: '<p>Edit me.</p>')
+end

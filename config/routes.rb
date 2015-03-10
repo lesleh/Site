@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :pages
-
   root 'posts#index'
 
   get 'blog/archive/:year/:month' => 'posts#index', :as => 'blog_archive'
@@ -9,6 +7,8 @@ Rails.application.routes.draw do
   resources :posts, :path => 'blog', :except => :index
 
   resources :messages
+
+  resources :pages
 
   # Authentication
   get 'session/login'
@@ -21,9 +21,8 @@ Rails.application.routes.draw do
   get 'projects/charts/:id' => 'charts#index'
 
   # Static pages
-  get 'about' => 'static_pages#view', defaults: { id: 'about' }
-  get 'projects' => 'static_pages#view', defaults: { id: 'projects' }
-  get 'page/:id' => 'static_pages#view'
+  get 'about' => 'pages#show', defaults: { id: 'about' }
+  get 'projects' => 'pages#show', defaults: { id: 'projects' }
 
   # Error pages
   match '/404', to: 'errors#not_found', via: :all

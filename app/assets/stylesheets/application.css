@@ -5,7 +5,6 @@
  *= require photos
  *= require posts
  *= require session
- *= require static_pages
  *= require sticky_footer
  *= require syntax
  *= require fontawesome/css/font-awesome.min

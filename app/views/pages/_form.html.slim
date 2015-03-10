@@ -1,18 +1,9 @@
-= form_for @page do |f|
-  - if @page.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
-      ul
-        - @page.errors.full_messages.each do |message|
-          li = message
-
+= bootstrap_form_for(@page, :inline_errors => false) do |f|
+  =f.alert_message "Please fix the errors below."
   .field
-    = f.label :title
     = f.text_field :title
   .field
-    = f.label :slug
     = f.text_field :slug
   .field
-    = f.label :body
-    = f.text_area :body
+    = f.text_area :body, :rows => 20
   .actions = f.submit

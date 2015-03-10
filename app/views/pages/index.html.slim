@@ -1,21 +1,19 @@
 h1 Listing pages
 
-table
+table.table.table-striped.table-hover
   thead
     tr
-      th Title
-      th Slug
-      th Body
-      th
-      th
-      th
+      th.col-md-3 Title
+      th.col-md-6 Body
+      th.col-md-1
+      th.col-md-1
+      th.col-md-1
 
   tbody
     - @pages.each do |page|
       tr
         td = page.title
-        td = page.slug
-        td = page.body
+        td = truncate page.body
         td = link_to 'Show', page
         td = link_to 'Edit', edit_page_path(page)
         td = link_to 'Destroy', page, data: {:confirm => 'Are you sure?'}, :method => :delete
