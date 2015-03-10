@@ -3,7 +3,7 @@
   .bs-component
     .list-group
       / Put this in a helper
-      - Post.months.each do |month|
+      - Post.months.reverse.each do |month|
         = link_to '/', :class => 'list-group-item' do
           span.badge= month[:count]
           |
