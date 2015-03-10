@@ -3,8 +3,8 @@ h1 Listing pages
 table.table.table-striped.table-hover
   thead
     tr
-      th.col-md-3 Title
-      th.col-md-6 Body
+      th.col-md-2 Title
+      th.col-md-7 Body
       th.col-md-1
       th.col-md-1
       th.col-md-1
@@ -13,9 +13,9 @@ table.table.table-striped.table-hover
     - @pages.each do |page|
       tr
         td = page.title
-        td = truncate page.body
+        td = truncate page.body, :length => 120
         td = link_to 'Show', page
-        td = link_to 'Edit', edit_page_path(page)
+        td = link_to 'Edit', edit_page_path(page), :data => {'row-link' => ''}
         td = link_to 'Destroy', page, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
