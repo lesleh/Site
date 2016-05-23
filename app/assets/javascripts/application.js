@@ -10,11 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require modernizr/modernizr
+// require modernizr
 //= require jquery
 //= require jquery-ujs
 //= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
-//= require lightbox2/js/lightbox
+//= require lightbox2/src/js/lightbox
 //= require jquery-readyselector/jquery.readyselector
 //= require jquery.hypher
 //= require hypher.en-gb
