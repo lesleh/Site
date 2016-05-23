@@ -40,7 +40,7 @@ gem 'bootstrap_form'
 
 gem 'will_paginate-bootstrap'
 
-gem "secure_headers"
+#gem "secure_headers"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
