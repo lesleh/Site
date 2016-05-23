@@ -40,6 +40,8 @@ gem 'bootstrap_form'
 
 gem 'will_paginate-bootstrap'
 
+gem 'figaro'
+
 #gem "secure_headers"
 
 # Use Capistrano for deployment
