@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.2'
+gem 'rails', '4.2.6'
 gem 'responders', '~> 2.0'
 
 # Database
@@ -14,8 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem "bower-rails", "~> 0.9.1"
 
 # JSExec
-gem 'therubyracer', platform: :ruby
-gem 'therubyrhino', platform: :jruby
+#gem 'therubyracer', platform: :ruby
+#gem 'therubyrhino', platform: :jruby
 
 gem 'slim-rails'
 gem 'jbuilder', '~> 2.0'
